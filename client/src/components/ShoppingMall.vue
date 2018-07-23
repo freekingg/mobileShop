@@ -5,8 +5,19 @@
       <van-row>
         <van-col span='3' class="location-icon"><i class="iconfont icon-dingwei"></i></van-col>
         <van-col span='16'><input type="text" class="search-input"></van-col>
-        <van-col span='5'><van-button size="mini">查找</van-button></van-col>
+        <van-col span='5'><van-button size="small">查找</van-button></van-col>
       </van-row>
+    </div>
+    <!-- swipe -->
+    <div class="swipe-area">
+      <van-swipe :autoplay="3000">
+        <van-swipe-item
+          v-for="(image, index) in bannerPicArray" 
+          :key="index"
+          >
+          <img v-lazy="image.imageUrl" />
+         </van-swipe-item>
+      </van-swipe>
     </div>
   </div>
 </template>
@@ -17,7 +28,12 @@
   export default {
     data() {
       return {
-
+        // 轮播图数据
+        bannerPicArray:[
+                {imageUrl:'http://7xjyw1.com1.z0.glb.clouddn.com/simleVueDemoPic001.jpg'},
+                {imageUrl:'http://7xjyw1.com1.z0.glb.clouddn.com/simleVueDemoPic002.jpg'},
+                {imageUrl:'http://7xjyw1.com1.z0.glb.clouddn.com/simleVueDemoPic003.jpg'},
+            ]
       }
     },
   }
@@ -31,6 +47,7 @@
     height: 2.2rem /* 165/75 */;
     background: #e5017d;  
     line-height: 2.2rem /* 165/75 */;
+    overflow: hidden;
   }
   .location-icon{
     text-align: center;
@@ -49,5 +66,14 @@
     border-bottom: 1px solid #fff !important;
     background: #e5017d;
     color: #fff;
+  }
+  .swipe-area{
+    clear: both;
+    max-height: 6.666667rem; /* 500/75 */
+    overflow: hidden;
+  }
+  .swipe-area img{
+    display: block;
+    width: 100%
   }
 </style>

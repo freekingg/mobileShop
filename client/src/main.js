@@ -8,13 +8,29 @@ import 'lib-flexible'
 
 Vue.config.productionTip = false
 
-import { Button, Row, Col } from 'vant'
-Vue.use(Button).use(Row).use(Col)
+// vant组件
+import {
+  Button,
+  Row,
+  Col,
+  Swipe, 
+  SwipeItem,
+  Lazyload
+} from 'vant'
+Vue.use(Button)
+  .use(Row)
+  .use(Col)
+  .use(Swipe)
+  .use(SwipeItem)
+  .use(Lazyload);
+
 
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
   router,
-  components: { App },
+  components: {
+    App
+  },
   template: '<App/>'
 })
