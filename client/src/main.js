@@ -6,6 +6,10 @@ import router from './router'
 
 import 'lib-flexible'
 
+// axios引入并挂载Vue原型
+import axios from 'axios'
+Vue.prototype.axios = axios;
+
 Vue.config.productionTip = false
 
 // vant组件
@@ -29,6 +33,7 @@ Vue.use(Button)
 new Vue({
   el: '#app',
   router,
+  data:{'name':111},
   components: {
     App
   },

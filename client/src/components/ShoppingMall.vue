@@ -36,6 +36,17 @@
             ]
       }
     },
+    created(){
+      // 首页模拟数据
+      this.axios.get('https://easy-mock.com/mock/5b559f6f4ff1f856c44c67ec/index', {
+      })
+      .then(function (response) {
+        console.log(response);
+      })
+      .catch(function (error) {
+         console.log(error);
+      })
+    }
   }
 </script>
 
