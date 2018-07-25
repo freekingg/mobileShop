@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .search-bar {
     height: 1.333333rem;
     /* 100/75 */
@@ -21,6 +22,25 @@
     width: 100%;
     height: .8rem/* 60/75 */
     ;
+=======
+.search-bar{
+    height: 1.333333rem; /* 100/75 */
+    background: #e5017d;  
+    line-height: 1.333333rem; /* 100/75 */
+    overflow: hidden;
+  }
+  .location-icon{
+    text-align: center;
+  }
+  .icon-dingwei{
+    color: #fff;
+    font-size: .533333rem /* 40/75 */;
+
+  }
+  .search-input{
+    width: 100%;
+    height: .8rem /* 60/75 */;
+>>>>>>> 1045276bef42639a4ba63dbd9ac3e567ebe75424
     border-top: none;
     border-left: none;
     border-right: none;
@@ -28,6 +48,7 @@
     background: #e5017d;
     color: #fff;
   }
+<<<<<<< HEAD
   
   .search-btn {
     text-align: center;
@@ -90,3 +111,83 @@
         height: 1.8rem;
         line-height:1.8rem;
     }
+=======
+  .search-btn{
+    text-align: center;
+  }
+  .swipe-area{
+    clear: both;
+    max-height: 6.666667rem; /* 500/75 */
+    overflow: hidden;
+  }
+  .swipe-area img{
+    display: block;
+    width: 100%
+  }
+  .type-bar{
+    background-color: #fff;
+    margin:0 .3rem .3rem .3rem;
+    border-radius: .3rem;
+    justify-content: space-between;
+    font-size:14px;
+    display: flex;
+}
+.type-bar div{
+    padding: .3rem;
+    font-size: 12px;
+    text-align: center;
+}
+.recommend-area{
+    background-color: #fff;
+    margin-top: .3rem;
+}
+.recommend-title{
+   border-bottom:1px solid #eee;
+   font-size:14px;
+   padding:.2rem;
+   color:#e5017d;
+}
+.recommend-body{
+    border-bottom: 1px solid #eee;
+}
+
+.recommend-item{
+   width:99%;
+   border-right: 1px solid #eee;
+   font-size: 12px;
+   text-align: center;
+}
+.floor-anomaly{
+      display: flex;
+      flex-direction:row;
+      background-color: #fff;
+      border-bottom:1px solid #ddd;
+  }
+  .floor-anomaly div{
+     /* width:10rem; */
+     box-sizing: border-box;
+     -webkit-box-sizing: border-box;
+  }
+  .floor-one{
+      border-right:1px solid #ddd;
+  }
+  .floor-two{
+      border-bottom:1px solid #ddd;
+  }
+  .floor-rule{
+    display: flex;
+    flex-direction: row;
+    flex-wrap:wrap;
+    background-color: #fff;
+
+}
+.floor-rule div{
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width:50%;
+    border-bottom:1px solid #ddd;
+}
+.floor-rule div:nth-child(odd){
+    border-right: 1px solid #ddd;
+}
+>>>>>>> 1045276bef42639a4ba63dbd9ac3e567ebe75424
