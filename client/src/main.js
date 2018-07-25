@@ -19,26 +19,22 @@ import {
   Col,
   Swipe, 
   SwipeItem,
-<<<<<<< HEAD
   Lazyload,
-  List
-=======
-  Lazyload
->>>>>>> 1045276bef42639a4ba63dbd9ac3e567ebe75424
+  List,
+  Field,
+  NavBar,
+  Toast 
 } from 'vant'
 Vue.use(Button)
   .use(Row)
   .use(Col)
   .use(Swipe)
   .use(SwipeItem)
-<<<<<<< HEAD
   .use(Lazyload)
-  .use(List);
-=======
-  .use(Lazyload);
->>>>>>> 1045276bef42639a4ba63dbd9ac3e567ebe75424
-
-
+  .use(List)
+  .use(Field)
+  .use(NavBar)
+  .use(Toast);
 /* eslint-disable no-new */
 new Vue({
   el: '#app',

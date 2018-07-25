@@ -31,7 +31,6 @@ export default {
   },
   watch: {
     floorData(val) {
-        console.log('object');
       this.floor1_0 = this.floorData[0];
       this.floor1_1 = this.floorData[1];
       this.floor1_2 = this.floorData[2];
