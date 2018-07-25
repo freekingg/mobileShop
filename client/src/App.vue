@@ -6,10 +6,7 @@
 
 <script>
 export default {
-  name: 'App',
-  compontes:{
-    Register
-  }
+  name: 'App'
 }
 </script>
 

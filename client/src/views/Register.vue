@@ -9,7 +9,7 @@
  
         <div class="register-panel">
         <van-field
-            v-model="username"
+            v-model="userName"
             label="用户名"
             icon="clear"
             placeholder="请输入用户名"
@@ -18,14 +18,14 @@
         />
  
         <van-field
-            v-model="password"
+            v-model="passWord"
             type="password"
             label="密码"
             placeholder="请输入密码"
             required
         />
         <div class="register-button">
-            <van-button type="primary" size="large">马上注册</van-button>
+            <van-button type="primary" @click="registerSubmit" size="large">马上注册</van-button>
         </div>
        </div>
  
@@ -33,6 +33,7 @@
 </template>
 
 <script>
+    import axios from 'axios';
      export default {
         data() {
             return {
@@ -43,6 +44,22 @@
         methods: {
             goBack() {
                 this.$router.go(-1)   
+            },
+            registerSubmit(){
+                axios({
+                     method: 'post',
+                    url:'http://localhost:3000/user/register',
+                    data: {
+                        userName: this.userName,
+                        passWord: this.passWord
+                    }
+                })
+                .then(response=>{
+                    console.log(response);
+                })
+                .catch(error=>{
+                    console.log(error);
+                })
             }
         },
     }
