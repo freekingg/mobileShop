@@ -1,8 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 
-// 视图组件
-import ShoppingMall from '@/components/ShoppingMall'
+import ShoppingMall from '@/views/ShoppingMall'
 
 Vue.use(Router)
 
@@ -16,3 +15,5 @@ export default new Router({
     }
   ]
 })
+
+

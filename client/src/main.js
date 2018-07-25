@@ -6,15 +6,38 @@ import router from './router'
 
 import 'lib-flexible'
 
+// axios引入并挂载Vue原型
+import axios from 'axios'
+Vue.prototype.axios = axios;
+
 Vue.config.productionTip = false
 
-import { Button, Row, Col } from 'vant'
-Vue.use(Button).use(Row).use(Col)
+// vant组件
+import {
+  Button,
+  Row,
+  Col,
+  Swipe, 
+  SwipeItem,
+  Lazyload,
+  List
+} from 'vant'
+Vue.use(Button)
+  .use(Row)
+  .use(Col)
+  .use(Swipe)
+  .use(SwipeItem)
+  .use(Lazyload)
+  .use(List);
+
 
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
   router,
-  components: { App },
+  data:{'name':111},
+  components: {
+    App
+  },
   template: '<App/>'
 })
