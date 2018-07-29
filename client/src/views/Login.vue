@@ -1,7 +1,7 @@
 <template>
     <div>
        <van-nav-bar
-        title="用户注册"
+        title="用户登录"
         left-text="返回"
         left-arrow
         @click-left="goBack"
@@ -31,7 +31,7 @@
              @click="registerAction" 
              size="large"
              :loading='openLoading'
-             >马上注册</van-button>
+             >登录</van-button>
         </div>
        </div>
  
@@ -78,10 +78,10 @@
             },
 
             registerSubmit(){
-                 this.openLoading = true
+                this.openLoading = true
                 axios({
                      method: 'post',
-                    url:'http://localhost:3000/user/register',
+                    url:'http://localhost:3000/user/login',
                     data: {
                         userName: this.userName,
                         passWord: this.passWord
@@ -89,10 +89,8 @@
                 })
                 .then(response=>{
                     if(response.data.code == '0'){
-                        Toast.success('注册成功')
-                        setTimeout(()=>{
-                            this.$router.push('/')
-                        },3000)
+                        Toast.success('登录成功')
+                        
                     }else if(response.data.code == '1'){
                         Toast.fail(response.data.message)
                     }

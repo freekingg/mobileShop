@@ -21,13 +21,21 @@ db.on('error',function(err){
 })
 db.on('open',function(){
     console.log('db connection sucess');
-    // UserModel.create({userName:'wp0214',passWord:'wangpeng'}).then((doc)=>{
-    //     console.log(doc);
-    // })
 })
+
+/* 插入商品详情数据 */
+// var insertGood = require('./data_json/insertGoods');
+// insertGood()
+/* 插入分类数据 */
+// var insertCategory = require('./data_json/insertCategory');
+// insertCategory()
+/* 插入子分类数据 */
+var insertCategorySub = require('./data_json/insertCategorySub');
+insertCategorySub()
+
 // 路由分发
-router.use('/',require('./api/home').routes())
 router.use('/user',require('./api/user').routes())
+router.use('/',require('./api/home').routes())
 
 //加载路由中间件
 app.use(router.routes()); 

@@ -8,7 +8,6 @@ var UserSchema = new Schema({
     },
     passWord:{
         type:String,
-        required:true
     },
     registerDate:{
         type:Date,
