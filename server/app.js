@@ -30,10 +30,11 @@ db.on('open',function(){
 // var insertCategory = require('./data_json/insertCategory');
 // insertCategory()
 /* 插入子分类数据 */
-var insertCategorySub = require('./data_json/insertCategorySub');
-insertCategorySub()
+// var insertCategorySub = require('./data_json/insertCategorySub');
+// insertCategorySub()
 
 // 路由分发
+router.use('/goods',require('./api/goods').routes())
 router.use('/user',require('./api/user').routes())
 router.use('/',require('./api/home').routes())
 

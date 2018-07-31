@@ -33,7 +33,6 @@ Router.post('/register',async(ctx)=>{
 Router.post('/login',async(ctx)=>{
     // 检测数据库是否存在用户名
     await UserModel.find({userName:ctx.request.body.userName}).then(data=>{
-        console.log(data);
         if(data.length==0){
             ctx.body = {
                 code:1,

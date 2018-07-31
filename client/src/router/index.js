@@ -4,6 +4,7 @@ import Router from 'vue-router'
 import ShoppingMall from '@/views/ShoppingMall'
 import Register from '@/views/Register'
 import Login from '@/views/Login'
+import GoodDetail from '@/views/goodDetail'
 
 Vue.use(Router)
 
@@ -14,6 +15,11 @@ export default new Router({
       path: '/',
       name: 'ShoppingMall',
       component: ShoppingMall
+    },
+    {
+      path:'/detail',
+      name:'GoodDetail',
+      component:GoodDetail
     },
     {
       path: '/register',

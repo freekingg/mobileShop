@@ -24,7 +24,8 @@ import {
   Field,
   NavBar,
   Toast,
-  Loading 
+  Loading,
+  Tab,Tabs 
 } from 'vant'
 Vue.use(Button)
   .use(Row)
@@ -36,7 +37,9 @@ Vue.use(Button)
   .use(Field)
   .use(NavBar)
   .use(Toast)
-  .use(Loading);
+  .use(Loading)
+  .use(Tab)
+  .use(Tabs);
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
