@@ -25,7 +25,7 @@ import {
   NavBar,
   Toast,
   Loading,
-  Tab,Tabs 
+  Tab,Tabs ,PullRefresh
 } from 'vant'
 Vue.use(Button)
   .use(Row)
@@ -39,7 +39,8 @@ Vue.use(Button)
   .use(Toast)
   .use(Loading)
   .use(Tab)
-  .use(Tabs);
+  .use(Tabs)
+  .use(PullRefresh);
 /* eslint-disable no-new */
 new Vue({
   el: '#app',

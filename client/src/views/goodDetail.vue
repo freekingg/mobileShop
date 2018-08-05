@@ -14,7 +14,7 @@
     <div class="goods-name">{{goodsInfo.NAME}}</div>
     <div class="goods-price">价格：{{goodsInfo.PRESENT_PRICE}}</div>
     <div>
-        <van-tabs >
+        <van-tabs swipeable sticky>
         <van-tab title="商品详情">
           <div class="detail" v-html="goodsInfo.DETAIL">
              
@@ -50,15 +50,11 @@
         methods:{
             onClickLeft(){
                 this.$router.go(-1)
-            }
-        },
-        created() {
-            // 获取路由信息中的query参数
-            this.goodsId = this.$route.query.goodsId
-            // 通过商品id查询商品信息
-            this.axios({
+            },
+            getDetails(goodsId) { 
+                this.axios({
                 method:'get',
-                url:'http://192.168.1.103:3000/goods/getDetails',
+                url:'http://localhost:3000/goods/getDetails',
                 params:{
                     goodsId:this.goodsId
                 }
@@ -70,6 +66,13 @@
             .catch((err) => {
                 console.log(err);
             });
+             }
+        },
+        created() {
+            // 获取路由信息中的query参数
+            this.goodsId = this.$route.query.goodsId
+            // 通过商品id查询商品信息
+            this.getDetails(this.goodsId)
         },
     }
 </script>
