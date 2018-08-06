@@ -56,7 +56,7 @@
                 method:'get',
                 url:'http://localhost:3000/goods/getDetails',
                 params:{
-                    goodsId:this.goodsId
+                    goodsId:goodsId
                 }
             })
             .then((result) => {
@@ -71,6 +71,7 @@
         created() {
             // 获取路由信息中的query参数
             this.goodsId = this.$route.query.goodsId
+            console.log('this.$route.query :', this.$route.query);
             // 通过商品id查询商品信息
             this.getDetails(this.goodsId)
         },
